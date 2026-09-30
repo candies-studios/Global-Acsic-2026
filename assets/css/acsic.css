@@ -1,0 +1,51 @@
+/* ==========================================================
+   ACSIC page – replicated from
+   globalacsic2026.in/acsic/
+   ========================================================== */
+
+/* Banner sits directly under the header, like the live site */
+body.hm-inner-page main { padding: 0; }
+
+.as-banner {
+  width: 100%;
+  aspect-ratio: 1920 / 600;
+  max-height: 360px;
+  background: #0B132E url("../images/acsic/acsic-banner.jpg") center center / cover no-repeat;
+}
+
+.as-sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.as-intro { margin: 60px 0; }
+.as-intro .hm-container { padding: 0 20px; }
+
+.as-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1;
+  color: #1F3F79;
+  margin: 0 0 20px;
+}
+
+.as-intro p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  color: #54595F;
+  margin: 0 0 14.4px;
+}
+
+@media (max-width: 767px) {
+  .as-banner { aspect-ratio: 1920 / 600; }
+  .as-intro { margin: 40px 0; }
+  .as-title { font-size: 24px; line-height: 1.25; }
+  .as-intro p { font-size: 16px; line-height: 24px; }
+}
