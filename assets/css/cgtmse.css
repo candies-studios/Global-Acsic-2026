@@ -1,0 +1,110 @@
+/* ==========================================================
+   CGTMSE page – replicated from globalacsic2026.in/cgtmse/
+   ========================================================== */
+
+/* Banner sits directly under the header, like the live site */
+body.hm-inner-page main { padding: 0; }
+
+.cg-banner {
+  width: 100%;
+  aspect-ratio: 1920 / 600;
+  max-height: 360px;
+  background: #0B132E url("../images/cgtmse/cgtmse-banner.jpg") center center / cover no-repeat;
+}
+
+.cg-sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* ---------- Intro ---------- */
+.cg-intro { margin: 60px 0; }
+.cg-intro .hm-container { padding: 0 20px; }
+
+.cg-intro-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1;
+  color: #1F3F79;
+  margin: 0 0 20px;
+}
+
+.cg-intro p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  color: #54595F;
+  margin: 0 0 14.4px;
+}
+
+/* ---------- Team sections ---------- */
+.cg-team { margin: 0 0 80px; padding: 0 10px; }
+
+.cg-team-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1;
+  color: #1F3F79;
+  text-align: center;
+  margin: 10px 0 40px;
+}
+
+.cg-rows { display: flex; flex-direction: column; gap: 50px; }
+
+.cg-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.cg-card { width: 250px; text-align: center; }
+.cg-secretariat .cg-row { gap: 20px; }
+.cg-secretariat .cg-card { width: 210px; }
+
+.cg-card img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border: 1px solid rgba(0, 0, 0, 0.145);
+  border-radius: 10px;
+}
+
+.cg-card h6 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #1F3F79;
+  margin: 8px 0 5px;
+  padding-top: 7px;
+}
+
+.cg-card p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #7A7A7A;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .cg-intro { margin: 40px 0; }
+  .cg-intro-title { font-size: 24px; line-height: 1.2; }
+  .cg-intro p { font-size: 16px; line-height: 24px; }
+  .cg-team-title { font-size: 28px; margin-bottom: 30px; }
+  .cg-rows { gap: 30px; }
+  .cg-row, .cg-secretariat .cg-row { gap: 30px 16px; }
+  .cg-card, .cg-secretariat .cg-card { width: calc(50% - 8px); }
+  .cg-card img { height: auto; aspect-ratio: 5 / 6; }
+}
