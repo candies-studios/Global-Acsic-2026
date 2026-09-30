@@ -1,0 +1,50 @@
+/* ==========================================================
+   Ministry of MSME page – replicated from
+   globalacsic2026.in/ministry-of-micro-small-and-medium-enterprises/
+   ========================================================== */
+
+/* Banner sits directly under the header, like the live site */
+body.hm-inner-page main { padding: 0; }
+
+.mn-banner {
+  width: 100%;
+  aspect-ratio: 1440 / 403.2;
+  background: #0B132E url("../images/ministry/ministry-banner.jpg") center center / cover no-repeat;
+}
+
+.mn-sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.mn-intro { margin: 60px 0; }
+.mn-intro .hm-container { padding: 0 20px; }
+
+.mn-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1;
+  color: #1F3F79;
+  margin: 0 0 20px;
+}
+
+.mn-intro p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  color: #54595F;
+  margin: 0 0 14.4px;
+}
+
+@media (max-width: 767px) {
+  .mn-banner { aspect-ratio: 1920 / 600; }
+  .mn-intro { margin: 40px 0; }
+  .mn-title { font-size: 24px; }
+  .mn-intro p { font-size: 16px; line-height: 24px; }
+}
