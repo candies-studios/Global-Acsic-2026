@@ -1,0 +1,90 @@
+/* ==========================================================
+   Video Gallery page – replicated from globalacsic2026.in/video/
+   ========================================================== */
+
+/* Gallery sits directly under the header, like the live site */
+body.hm-inner-page main { padding: 0; }
+
+@keyframes acsicModalOpen { 
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.acsic-video-widget { --navy: #071426; --navy-light: #0d2340; --blue: #174d91; --blue-bright: #168ad0; --yellow: #ffbf00; --yellow-hover: #ffd04a; --white: #ffffff; --off-white: #f7f9fb; --text: #182438; --muted: #657084; --border: rgba(7, 20, 38, 0.10); width: 100%; margin: 0px; padding: 0px; background: var(--off-white); color: var(--text); font-family: Poppins, Arial, Helvetica, sans-serif; line-height: 1.6; overflow: hidden; }
+.acsic-video-widget *, .acsic-video-widget ::before, .acsic-video-widget ::after { box-sizing: border-box; }
+.acsic-video-widget h1, .acsic-video-widget h2, .acsic-video-widget h3, .acsic-video-widget p { margin-top: 0px; }
+.acsic-video-widget img { max-width: 100%; }
+.acsic-video-hero { position: relative; min-height: 430px; display: flex; align-items: center; justify-content: center; padding: 95px 25px 85px; overflow: hidden; background: radial-gradient(circle at 50% 0%, rgba(25, 107, 175, 0.4), transparent 43%), linear-gradient(135deg, rgb(3, 12, 24) 0%, rgb(7, 20, 38) 50%, rgb(10, 29, 52) 100%); }
+.acsic-video-hero::before { content: ""; position: absolute; inset: 0px; opacity: 0.45; background-image: linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px); background-size: 85px 85px; mask-image: linear-gradient(rgba(0, 0, 0, 0.9), transparent); pointer-events: none; }
+.acsic-video-hero::after { content: ""; position: absolute; width: 900px; height: 900px; top: -620px; left: 50%; transform: translateX(-50%); border-radius: 50%; border: 1px solid rgba(255, 191, 0, 0.13); box-shadow: rgba(255, 255, 255, 0.02) 0px 0px 0px 75px, rgba(255, 255, 255, 0.016) 0px 0px 0px 150px, rgba(255, 255, 255, 0.01) 0px 0px 0px 225px; pointer-events: none; }
+.acsic-video-hero-inner { position: relative; z-index: 2; width: 100%; max-width: 1050px; margin: 0px auto; text-align: center; }
+.acsic-video-eyebrow { display: inline-flex; align-items: center; gap: 13px; margin-bottom: 21px; color: var(--yellow); font-size: 12px; font-weight: 600; letter-spacing: 2.4px; text-transform: uppercase; }
+.acsic-video-eyebrow::before, .acsic-video-eyebrow::after { content: ""; width: 30px; height: 2px; background: var(--yellow); }
+.acsic-video-title { letter-spacing: 0.8px; text-transform: uppercase; margin: 0px !important; color: rgb(255, 255, 255) !important; font-family: "Bebas Neue", "Arial Narrow", sans-serif !important; font-size: clamp(58px, 8vw, 108px) !important; font-weight: 400 !important; line-height: 0.9 !important; }
+.acsic-video-title span { color: var(--yellow); }
+.acsic-video-description { max-width: 760px; margin: 25px auto 0px; color: rgba(255, 255, 255, 0.82); font-size: clamp(12px, 1.4vw, 15px); font-weight: 400; line-height: 1.8; }
+.acsic-video-divider { width: 65px; height: 3px; margin: 27px auto 0px; border-radius: 10px; background: var(--yellow); }
+.acsic-video-main { width: min(1180px, 100% - 50px); margin: 0px auto; padding: 80px 0px 95px; }
+.acsic-video-section-header { display: flex; justify-content: space-between; align-items: flex-end; gap: 35px; margin-bottom: 40px; }
+.acsic-video-section-header-left { max-width: 700px; }
+.acsic-video-label { margin-bottom: 8px; color: var(--blue-bright); font-size: 11px; font-weight: 700; letter-spacing: 2.2px; text-transform: uppercase; }
+.acsic-video-section-title { letter-spacing: 0.5px; text-transform: uppercase; margin: 0px !important; color: var(--navy) !important; font-family: "Bebas Neue", "Arial Narrow", sans-serif !important; font-size: clamp(48px, 5vw, 70px) !important; font-weight: 400 !important; line-height: 0.95 !important; }
+.acsic-video-section-description { max-width: 680px; margin: 15px 0px 0px; color: var(--muted); font-size: 13px; line-height: 1.8; }
+.acsic-video-count { flex-shrink: 0; display: flex; align-items: center; gap: 9px; padding: 9px 15px; border: 1px solid var(--border); border-radius: 4px; background: rgb(255, 255, 255); color: var(--navy); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; box-shadow: rgba(7, 20, 38, 0.05) 0px 5px 18px; }
+.acsic-video-count strong { color: var(--yellow); font-size: 18px; font-weight: 700; }
+.acsic-video-grid { display: grid; grid-template-columns: repeat(3, minmax(0px, 1fr)); gap: 25px; }
+.acsic-video-card { position: relative; overflow: hidden; background: rgb(255, 255, 255); border: 1px solid var(--border); border-radius: 7px; box-shadow: rgba(7, 20, 38, 0.055) 0px 5px 20px; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; }
+.acsic-video-card:hover { transform: translateY(-6px); border-color: rgba(255, 191, 0, 0.55); box-shadow: rgba(7, 20, 38, 0.12) 0px 17px 40px; }
+.acsic-video-thumbnail { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: var(--navy); }
+.acsic-video-thumbnail img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.55s, filter 0.45s; }
+.acsic-video-card:hover .acsic-video-thumbnail img { transform: scale(1.055); filter: brightness(0.72); }
+.acsic-video-overlay { position: absolute; inset: 0px; background: linear-gradient(rgba(7, 20, 38, 0.05), rgba(7, 20, 38, 0.68)); }
+.acsic-video-number { position: absolute; top: 13px; left: 13px; padding: 5px 9px; background: rgba(7, 20, 38, 0.82); border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 3px; color: rgb(255, 255, 255); font-size: 9px; font-weight: 600; letter-spacing: 1.1px; text-transform: uppercase; }
+.acsic-video-play { position: absolute; top: 50%; left: 50%; width: 61px; height: 61px; display: flex; align-items: center; justify-content: center; transform: translate(-50%, -50%); border-radius: 50%; background: var(--yellow); box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 28px; transition: transform 0.3s, background 0.3s; }
+.acsic-video-play::after { content: ""; width: 0px; height: 0px; margin-left: 4px; border-top: 8px solid transparent; border-bottom: 8px solid transparent; border-left: 12px solid var(--navy); }
+.acsic-video-card:hover .acsic-video-play { transform: translate(-50%, -50%) scale(1.12); background: rgb(255, 255, 255); }
+.acsic-video-content { padding: 18px 20px 21px; }
+.acsic-video-content h3 { margin: 0px !important; color: var(--navy) !important; font-family: Poppins, Arial, sans-serif !important; font-size: 14px !important; font-weight: 600 !important; line-height: 1.45 !important; }
+.acsic-video-content p { margin: 6px 0px 0px; color: var(--blue-bright); font-size: 10px; font-weight: 600; letter-spacing: 0.7px; text-transform: uppercase; }
+.acsic-video-card::after { content: ""; position: absolute; left: 0px; bottom: 0px; width: 0px; height: 3px; background: var(--yellow); transition: width 0.35s; }
+.acsic-video-card:hover::after { width: 100%; }
+.acsic-video-cta { position: relative; margin-top: 65px; padding: 43px 48px; overflow: hidden; border-radius: 7px; background: radial-gradient(circle at 90% 50%, rgba(20, 137, 208, 0.38), transparent 35%), linear-gradient(110deg, rgb(7, 20, 38), rgb(16, 45, 80)); box-shadow: rgba(7, 20, 38, 0.13) 0px 15px 40px; }
+.acsic-video-cta::before { content: ""; position: absolute; width: 400px; height: 400px; right: -220px; top: -180px; border: 1px solid rgba(255, 191, 0, 0.18); border-radius: 50%; box-shadow: rgba(255, 255, 255, 0.016) 0px 0px 0px 55px, rgba(255, 255, 255, 0.01) 0px 0px 0px 110px; }
+.acsic-video-cta-inner { position: relative; z-index: 2; max-width: 730px; }
+.acsic-video-cta-label { margin-bottom: 8px; color: var(--yellow); font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+.acsic-video-cta h2 { text-transform: uppercase; margin: 0px !important; color: rgb(255, 255, 255) !important; font-family: "Bebas Neue", "Arial Narrow", sans-serif !important; font-size: clamp(35px, 4vw, 52px) !important; font-weight: 400 !important; line-height: 0.95 !important; }
+.acsic-video-cta p { max-width: 650px; margin: 13px 0px 0px; color: rgba(255, 255, 255, 0.7); font-size: 12px; line-height: 1.75; }
+.acsic-video-modal { position: fixed; inset: 0px; z-index: 999999; display: none; align-items: center; justify-content: center; padding: 30px; background: rgba(2, 8, 18, 0.94); backdrop-filter: blur(8px); }
+.acsic-video-modal.active { display: flex; }
+.acsic-video-modal-inner { position: relative; width: min(1100px, 100%); animation: 0.3s ease 0s 1 normal none running acsicModalOpen; }
+.acsic-video-frame { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: rgb(0, 0, 0); border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.55) 0px 25px 80px; }
+.acsic-video-frame iframe { display: block; width: 100%; height: 100%; border: 0px; }
+.acsic-video-close { position: absolute; right: 0px; top: -54px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; padding: 0px; border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 50%; background: rgba(255, 255, 255, 0.08); color: rgb(255, 255, 255); font-family: Arial, sans-serif; font-size: 24px; line-height: 1; cursor: pointer; transition: background 0.25s, transform 0.25s; }
+.acsic-video-close:hover { background: var(--yellow); color: var(--navy); transform: rotate(90deg); }
+body.acsic-video-modal-open { overflow: hidden; }
+.acsic-video-card:focus-visible { outline: 3px solid var(--yellow); outline-offset: 4px; }
+.acsic-video-close:focus-visible { outline: 2px solid var(--yellow); outline-offset: 3px; }
+@media (max-width: 1024px) { .acsic-video-hero { min-height: 400px; padding: 85px 25px 75px; } }
+@media (max-width: 1024px) { .acsic-video-main { width: min(920px, 100% - 40px); padding: 65px 0px 80px; } }
+@media (max-width: 1024px) { .acsic-video-grid { grid-template-columns: repeat(2, minmax(0px, 1fr)); gap: 22px; } }
+@media (max-width: 680px) { .acsic-video-hero { min-height: 365px; padding: 70px 18px 65px; } }
+@media (max-width: 680px) { .acsic-video-eyebrow { gap: 8px; margin-bottom: 18px; font-size: 9px; letter-spacing: 1.6px; } }
+@media (max-width: 680px) { .acsic-video-eyebrow::before, .acsic-video-eyebrow::after { width: 17px; } }
+@media (max-width: 680px) { .acsic-video-title { font-size: clamp(52px, 15vw, 75px) !important; line-height: 0.88 !important; } }
+@media (max-width: 680px) { .acsic-video-description { margin-top: 20px; font-size: 11px; line-height: 1.7; } }
+@media (max-width: 680px) { .acsic-video-main { width: calc(100% - 30px); padding: 55px 0px 70px; } }
+@media (max-width: 680px) { .acsic-video-section-header { display: block; margin-bottom: 30px; } }
+@media (max-width: 680px) { .acsic-video-section-title { font-size: 52px !important; } }
+@media (max-width: 680px) { .acsic-video-section-description { font-size: 11px; line-height: 1.75; } }
+@media (max-width: 680px) { .acsic-video-count { display: inline-flex; margin-top: 18px; } }
+@media (max-width: 680px) { .acsic-video-grid { grid-template-columns: 1fr; gap: 20px; } }
+@media (max-width: 680px) { .acsic-video-content { padding: 16px 17px 19px; } }
+@media (max-width: 680px) { .acsic-video-content h3 { font-size: 13px !important; } }
+@media (max-width: 680px) { .acsic-video-cta { margin-top: 45px; padding: 32px 25px; } }
+@media (max-width: 680px) { .acsic-video-cta h2 { font-size: 38px !important; } }
+@media (max-width: 680px) { .acsic-video-cta p { font-size: 11px; } }
+@media (max-width: 680px) { .acsic-video-modal { padding: 18px; } }
+@media (max-width: 680px) { .acsic-video-close { top: -50px; width: 38px; height: 38px; } }
+@media (max-width: 390px) { .acsic-video-title { font-size: 50px !important; } }
+@media (max-width: 390px) { .acsic-video-section-title { font-size: 47px !important; } }
+@media (max-width: 390px) { .acsic-video-hero { min-height: 350px; } }
+@media (prefers-reduced-motion: reduce) { .acsic-video-widget *, .acsic-video-widget ::before, .acsic-video-widget ::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; } }
