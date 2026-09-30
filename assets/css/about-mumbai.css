@@ -1,0 +1,107 @@
+/* ==========================================================
+   About Mumbai page – replicated from globalacsic2026.in/about-mumbai/
+   ========================================================== */
+
+/* Banner sits directly under the header, like the live site */
+body.hm-inner-page main { padding: 0; }
+
+.mb-banner {
+  width: 100%;
+  aspect-ratio: 1920 / 600;
+  max-height: 360px;
+  background: #0B132E url("../images/about-mumbai/about-mumbai-banner.jpg") center center / cover no-repeat;
+}
+
+.mb-sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.mb-content { margin: 60px 0; padding: 10px 0; }
+
+.mb-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1;
+  color: #1F3F79;
+  text-align: center;
+  margin: 0 0 30px;
+}
+
+.mb-photo {
+  display: block;
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.mb-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  color: #54595F;
+}
+
+.mb-text h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1;
+  color: #1F3F79;
+  margin: 30px 0 15px;
+}
+
+.mb-text p { margin: 0 0 14.4px; }
+.mb-text ul { margin: 0; padding-left: 40px; }
+
+/* Local specialties cards */
+.mb-foods {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 10px;
+  margin: 17px 0 10px;
+}
+
+.mb-food { text-align: center; }
+
+.mb-food img {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.mb-food h5 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #1F3F79;
+  margin: 29px 0 16px;
+}
+
+@media (max-width: 1024px) {
+  .mb-photo { height: 450px; }
+  .mb-foods { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 767px) {
+  .mb-content { margin: 40px 0; }
+  .mb-title { font-size: 24px; line-height: 1.25; }
+  .mb-photo { height: 260px; border-radius: 15px; }
+  .mb-text { font-size: 16px; line-height: 24px; }
+  .mb-text h3 { font-size: 20px; line-height: 1.2; }
+  .mb-text ul { padding-left: 24px; }
+  .mb-foods { grid-template-columns: 1fr 1fr; gap: 16px; padding: 0; }
+  .mb-food img { height: 160px; }
+  .mb-food h5 { font-size: 16px; margin: 12px 0 8px; }
+}
