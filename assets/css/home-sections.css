@@ -1,0 +1,456 @@
+/* ==========================================================
+   Home page sections – replicated from globalacsic2026.in
+   Why Participate · Who Should Attend · Key Focus Areas ·
+   About the Event · What The Event Includes · Venue +
+   Event at a Glance · Join the Global Dialogue
+   ========================================================== */
+
+:root {
+  --hm-blue: #1F3F79;
+  --hm-text: #54595F;
+  --hm-cyan: #24C2F1;
+  --hm-yellow: #FFC300;
+  --hm-card-bg: #F6FBFC;
+  --hm-divider: #DFDFDF;
+}
+
+.hm-section {
+  padding: 50px 0;
+  background: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.hm-container {
+  max-width: 1330px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hm-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--hm-blue);
+  margin: 0 0 30px;
+}
+
+.hm-heading.center { text-align: center; }
+
+.hm-subtitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--hm-text);
+  text-align: center;
+  margin: -15px 0 45px;
+}
+
+.hm-eyebrow {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: var(--hm-cyan);
+  text-transform: uppercase;
+  margin: 0 0 15px;
+}
+
+/* ---------- Two-column (image + text) ---------- */
+.hm-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hm-split-img img {
+  display: block;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 11px;
+}
+
+.hm-split-img.short img { height: 450px; }
+.hm-split-img.round img { border-radius: 15px; }
+
+/* ---------- Check-circle list ---------- */
+.hm-checklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hm-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12.5px 0;
+  border-bottom: 1px solid var(--hm-divider);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--hm-text);
+}
+
+.hm-checklist li:first-child { padding-top: 0; }
+.hm-checklist li:last-child { border-bottom: 0; padding-bottom: 0; }
+
+.hm-checklist svg {
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+  margin-top: 4px;
+  fill: var(--hm-cyan);
+}
+
+/* ---------- Cards (Key Focus / What Includes) ---------- */
+.hm-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.hm-card {
+  background: var(--hm-card-bg);
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  padding: 30px 35px;
+}
+
+.hm-card-icon {
+  width: 50px;
+  height: 50px;
+  fill: var(--hm-yellow);
+  display: block;
+  margin-bottom: 20px;
+}
+
+.hm-card h4 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--hm-blue);
+  margin: 0 0 12px;
+}
+
+.hm-card p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--hm-text);
+  margin: 0;
+}
+
+/* ---------- About the Event ---------- */
+.hm-about-text p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--hm-text);
+  margin: 0 0 15px;
+}
+
+.hm-btn {
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+  color: #000;
+  background: var(--hm-yellow);
+  padding: 15px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  margin-top: 15px;
+  transition: opacity .2s ease;
+}
+
+.hm-btn:hover { opacity: .9; color: #000; }
+
+.hm-btn.sm {
+  font-size: 15px;
+  padding: 12px 24px;
+  border: 2px solid var(--hm-yellow);
+  color: #0F0F0F;
+  margin-top: 0;
+}
+
+/* ---------- Venue + Event at a Glance ---------- */
+.hm-venue {
+  background-color: var(--hm-blue);
+  background-image: url("../images/home/venue-bg.png");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 0;
+}
+
+.hm-venue-top {
+  display: grid;
+  grid-template-columns: 893fr 377fr;
+  gap: 40px;
+  padding: 130px 15px 60px;
+}
+
+.hm-venue .hm-heading { color: #fff; margin-bottom: 25px; }
+
+.hm-venue-top p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  margin: 0;
+}
+
+.hm-venue-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hm-venue-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #fff;
+}
+
+.hm-venue-list svg {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  fill: var(--hm-yellow);
+}
+
+.hm-glance {
+  padding: 30px 15px 90px;
+}
+
+.hm-glance .hm-heading {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.hm-counters {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.hm-counter-num {
+  font-family: 'Roboto', sans-serif;
+  font-size: 69px;
+  font-weight: 600;
+  line-height: 1;
+  color: #fff;
+}
+
+.hm-counter-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #fff;
+  margin: 10px 0 0;
+}
+
+/* ---------- Join the Global Dialogue ---------- */
+.hm-join { padding: 60px 0; }
+
+.hm-cta {
+  position: relative;
+  min-height: 280px;
+  margin: 0 15px;
+  border-radius: 25px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url("../images/home/join-dialogue.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hm-cta-inner {
+  position: relative;
+  padding: 35px;
+}
+
+.hm-cta h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+  color: #fff;
+  margin: 0 0 15px;
+}
+
+.hm-cta p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  margin: 0 0 20px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .hm-cards { grid-template-columns: 1fr 1fr; }
+  .hm-counters { grid-template-columns: 1fr 1fr; row-gap: 40px; }
+  .hm-venue-top { grid-template-columns: 1fr; padding-top: 80px; }
+}
+
+@media (max-width: 767px) {
+  .hm-section { padding: 40px 0; }
+  .hm-heading { font-size: 30px; margin-bottom: 20px; }
+  .hm-eyebrow { font-size: 18px; letter-spacing: 2.7px; }
+  .hm-split { grid-template-columns: 1fr; gap: 30px; }
+  .hm-split .hm-split-img { order: -1; }
+  .hm-split-img img,
+  .hm-split-img.short img { height: 300px; }
+  .hm-split-img.round img { height: auto; }
+  .hm-cards { grid-template-columns: 1fr; padding: 0; }
+  .hm-card { padding: 30px 20px; }
+  .hm-card h4 { font-size: 20px; }
+  .hm-counter-num { font-size: 50px; }
+  .hm-counters { grid-template-columns: 1fr; }
+  .hm-glance { padding-bottom: 60px; }
+  .hm-cta { margin: 0; }
+  .hm-cta h2 { font-size: 30px; line-height: 36px; }
+  .hm-venue {
+    background-image: linear-gradient(rgba(31, 63, 121, .45), rgba(31, 63, 121, .45)), url("../images/home/venue-bg.png");
+  }
+  .hm-cta h2, .hm-cta p { text-shadow: 0 2px 8px rgba(0, 0, 0, .6); }
+}
+
+/* Remove the default gap between the last section and the footer */
+body.home main { padding-bottom: 0; }
+
+/* ---------- Footer (replicated from live site) ---------- */
+.hm-footer {
+  background-color: #0B132E;
+  background-image: url("../images/home/footer-skyline.jpg");
+  background-size: 100% auto;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  padding: 60px 10px 360px;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.hm-footer .hm-container { padding: 0 10px; }
+
+.hm-foot-logo {
+  text-align: center;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.hm-foot-logo img {
+  display: inline-block;
+  width: 467px;
+  max-width: 100%;
+  height: auto;
+}
+
+.hm-foot-cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 10px 10px 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.hm-footer h5 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  color: #fff;
+  margin: 0 0 20px;
+}
+
+.hm-foot-list,
+.hm-foot-inline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hm-foot-list li { padding-bottom: 5px; }
+.hm-foot-list li:last-child { padding-bottom: 0; }
+
+.hm-footer li a,
+.hm-foot-inline li {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 4px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.hm-footer li span { transition: color .2s ease; }
+.hm-footer li a:hover span { color: #FFC300; }
+
+.hm-footer li svg {
+  flex: 0 0 14px;
+  width: 14px;
+  height: 14px;
+  margin-top: 5px;
+  fill: #FFC300;
+}
+
+.hm-foot-contact {
+  text-align: center;
+  padding: 10px 10px 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.hm-foot-inline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 30px;
+}
+
+.hm-foot-inline li { line-height: 32px; }
+.hm-foot-inline li a { line-height: 32px; }
+.hm-foot-inline li svg { margin-top: 9px; }
+
+.hm-foot-copy {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .hm-foot-cols { grid-template-columns: repeat(2, 1fr); row-gap: 30px; }
+  .hm-footer { padding-bottom: 260px; }
+}
+
+@media (max-width: 767px) {
+  .hm-foot-cols { grid-template-columns: 1fr; }
+  .hm-foot-inline { flex-direction: column; align-items: center; }
+  .hm-foot-inline li { line-height: 26px; justify-content: center; }
+  .hm-footer { padding-bottom: 160px; }
+}
