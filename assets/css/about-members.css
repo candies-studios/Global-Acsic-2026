@@ -1,0 +1,74 @@
+/* ==========================================================
+   About Members page – replicated from globalacsic2026.in/about-members/
+   ========================================================== */
+
+/* Banner sits directly under the header, like the live site */
+body.hm-inner-page main { padding: 0; }
+
+.am-banner {
+  width: 100%;
+  aspect-ratio: 1920 / 600;
+  max-height: 360px;
+  background: #0B132E url("../images/about-members/members-banner.jpg") center center / cover no-repeat;
+}
+
+.am-sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.am-list { margin: 60px 0; }
+.am-list .hm-container { padding: 0 20px; }
+
+.am-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1;
+  color: #1F3F79;
+  margin: 0 0 20px;
+}
+
+.am-table-wrap { overflow-x: auto; }
+
+.am-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #111;
+}
+
+.am-table th {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  background: #1F3F79;
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #1F3F79;
+}
+
+.am-table td {
+  padding: 8px;
+  border: 1px solid #767676;
+  vertical-align: top;
+}
+
+.am-table tbody tr:nth-child(odd) td { background: rgba(128, 128, 128, 0.07); }
+
+.am-table .am-no { width: 70px; text-align: center; }
+.am-table th:nth-child(2), .am-table td:nth-child(2) { width: 200px; }
+
+@media (max-width: 767px) {
+  .am-list { margin: 40px 0; }
+  .am-title { font-size: 24px; line-height: 1.25; }
+  .am-table { font-size: 14px; line-height: 20px; }
+  .am-table .am-no { width: 40px; }
+  .am-table th:nth-child(2), .am-table td:nth-child(2) { width: 110px; }
+}
